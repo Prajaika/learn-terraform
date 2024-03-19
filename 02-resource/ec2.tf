@@ -3,3 +3,4 @@ resource "aws_instance" "test" {
   instance_type = "t3.micro"
 }
 
+
