@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
-  for_each      = var.instance_types
-  ami           = var.ami
-  instance_type = each.value["instance_type"]
+  for_each               = var.instance_types
+  ami                    = var.ami
+  instance_type          = each.value["instance_type"]
   vpc_security_group_ids = var.security_groups
   tags = {
     Name = each.key
@@ -17,7 +17,7 @@ variable "instance_type" {
 }
 
 variable "security_groups" {
-  default = ["sg-039ea9c77ec0fdcbd"]
+  default = ["sg-06b8bece9ed37b3dc"]
 }
 
 variable "instance_types" {
@@ -32,7 +32,8 @@ variable "instance_types" {
     }
 
     backend = {
-      instance_type = " t3.micro"
+      instance_type = "t3.micro"
     }
+
   }
 }
