@@ -7,3 +7,10 @@ resource "aws_instance" "test" {
 }
 
 variable "instance_type" {}
+
+variable "number" {}
+
+output "number" {
+  value = var.number > 10 ? "Number is greater than 10" : "Number is less than or equal to 10"
+}
+
