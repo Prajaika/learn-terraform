@@ -1,4 +1,5 @@
 # Declare the variable with value
+
 variable "x" {
   default = 100
 }
